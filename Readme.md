@@ -133,6 +133,8 @@ Nominal design, perturbed plant (+10 / 20 / 40 %), one parameter group at a time
 ├── baseline_sim.m
 ├── sweep_all.m
 ├── calc_metrics.m
+├── LICENSE
+├── Readme.md
 ├── figures/               # figures used in this README
 ├── Vid_example/           # GIFs shown in this README
 └── .gitignore
