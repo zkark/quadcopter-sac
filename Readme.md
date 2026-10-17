@@ -79,7 +79,7 @@ Setup: 10 s plan from (0, 0, 0.5) m to (2, 5, 1) m with a 90° yaw turn, initial
 
 | | |
 |---|---|
-| ![World-frame output vs desired](figures/world_output.png) | ![Tracking errors](figures/tracking_errors.png) |
+| ![World-frame output vs desired](Figures/world_output.png) | ![Tracking errors](Figures/tracking_errors.png) |
 
 - Position error converges to zero by about 5 s and stays there.
 - Between about 1.7 s and 3.5 s there is an oscillation burst in roll and pitch, up to about ±0.18 rad (≈ ±10°), with the yaw torque hitting its limit.
@@ -90,11 +90,11 @@ Nominal design, perturbed plant (+10 / 20 / 40 %), one parameter group at a time
 
 **With a first-order compensator on z and ψ (`H(0) = 0.25`)**
 
-![Mismatch sweep, first-order H](figures/mismatch_sweep_before.png)
+![Mismatch sweep, first-order H](Figures/mismatch_sweep_before.png)
 
 **With the washout compensator (`H(0) = 0`)**
 
-![Mismatch sweep, washout H](figures/mismatch_sweep_after.png)
+![Mismatch sweep, washout H](Figures/mismatch_sweep_after.png)
 
 - **Wrong mass, before.** SAC had the largest steady-state error (about 0.25 m at +10 %, about 1 m at +40 %), worse than LQR.
 - **Wrong mass, after.** The final error drops to about 0.005 m at +10 % and about 0.03 m at +40 %, on par with PID and LQI. LQR is now the worst (about 0.39 m at +40 %), as expected without integral action. In rms error SAC (about 0.18 m at +40 %) is still behind LQI (about 0.13 m) and PID (about 0.10 m), which is probably the time the adaptive integral gain needs to build up.
